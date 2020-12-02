@@ -1,7 +1,7 @@
 name: push-urls-to-baidu
 on:
   schedule:
-    - cron: 0/25 * * * * 
+    - cron: 0/25 * * * *
   watch:
     types: started
 jobs:
@@ -17,4 +17,3 @@ jobs:
         run: |
           wget $sitemap_txt_url -qO urls.txt
           curl -s -H 'Content-Type:text/plain' --data-binary @urls.txt $baidu_api
-©
